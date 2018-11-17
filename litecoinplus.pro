@@ -108,16 +108,21 @@ contains(BITCOIN_NEED_QT_PLUGINS, 1) {
 # Because of scrypt_mine.cpp, we also have to add a compile
 #     flag that states we *really* don't have SSE
 # Otherwise, assume sse2 exists
-!equals($$QMAKE_HOST.arch, armv7l)
-{
-  message(FOUND host = $$QMAKE_HOST.arch)
-  QMAKE_CXXFLAGS += -mthumb -DNOSSE
-  QMAKE_CFLAGS += -mthumb -DNOSSE
+QMAKE_XCPUARCH = $$QMAKE_HOST.arch
+equals(QMAKE_XCPUARCH, armv7l) {
+    message(Building without SSE2 support)
+	QMAKE_CXXFLAGS += -DNOSSE
+    QMAKE_CFLAGS += -DNOSSE
 }
-else
-{
-  QMAKE_CXXFLAGS += -msse2
-  QMAKE_CFLAGS += -msse2
+else:equals(QMAKE_XCPUARCH, armv6l) {
+    message(Building without SSE2 support)
+	QMAKE_CXXFLAGS += -DNOSSE
+    QMAKE_CFLAGS += -DNOSSE
+}
+else {
+    message(Building with SSE2 support)
+    QMAKE_CXXFLAGS += -msse2
+    QMAKE_CFLAGS += -msse2
 }
 #endif
 
