@@ -1,4 +1,4 @@
-litecoinplus-qt: Qt4 GUI for LitecoinPlus
+litecoinplus-qt: Qt4 GUI for LitecoinPlus ARM
 ===============================
 
 Build instructions
@@ -19,8 +19,8 @@ distribution are installed, for Debian and Ubuntu these are:
 If you get an error that libdb4.8++dev cannot be found, please do the following first:
 
 ::
-    add-apt-repository ppa:bitcoin/bitcoin
-    apt-get update
+    sudo add-apt-repository ppa:bitcoin/bitcoin
+    sudo apt-get update
 
 then do the first step again. After installation completed, then execute the following:
 
