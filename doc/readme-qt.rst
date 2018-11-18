@@ -23,7 +23,7 @@ sudo apt-get update
 then do the first step again.
 After installation completed, then execute the following:
 
-qmake
+qmake USE_UPNP=-
 
 make
 
