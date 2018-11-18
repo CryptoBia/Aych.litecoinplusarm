@@ -24,8 +24,11 @@ then do the first step again.
 After installation completed, then execute the following:
 
 qmake
+
 make
+
 strip liteoinplus-qt
+
 
 Alternatively, install Qt Creator and open the `litecoinplus-qt.pro` file.
 
