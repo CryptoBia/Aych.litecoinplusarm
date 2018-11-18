@@ -17,6 +17,7 @@ distribution are installed, for Debian and Ubuntu these are:
 If you get an error that libdb4.8++dev cannot be found, please do the following first:
 
 sudo add-apt-repository ppa:bitcoin/bitcoin
+
 sudo apt-get update
 
 then do the first step again.
