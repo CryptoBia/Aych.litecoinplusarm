@@ -10,22 +10,17 @@ Debian / Ubuntu
 First, make sure that the required packages for Qt4 development of your
 distribution are installed, for Debian and Ubuntu these are:
 
-::
-
-    apt-get install qt4-qmake libqt4-dev build-essential libboost-dev libboost-system-dev \
-        libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev \
-        libssl-dev libdb4.8++-dev
+sudo apt-get install qt4-qmake libqt4-dev build-essential libboost-dev libboost-system-dev \
+     libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev \
+     libssl-dev libdb4.8++-dev
 
 If you get an error that libdb4.8++dev cannot be found, please do the following first:
 
-::
 sudo add-apt-repository ppa:bitcoin/bitcoin
-
 sudo apt-get update
 
-then do the first step again. After installation completed, then execute the following:
-
-::
+then do the first step again.
+After installation completed, then execute the following:
 
     qmake
     make
