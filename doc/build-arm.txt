@@ -72,6 +72,8 @@ sudo add-apt-repository ppa:bitcoin/bitcoin
 sudo apt-get update
 sudo apt-get install libdb4.8-dev libdb4.8++-dev
 
+you make need it add software-properties-common if add-apt-repository command not found
+sudo apt-get install software-properties-common
 
 if you need/want to compile your own
 
